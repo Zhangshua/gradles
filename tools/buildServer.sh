@@ -12,19 +12,19 @@ SCRIPTPATH=$(cd $rw && pwd )/tools/
 
 
 init(){
-    read -p "请输入你的英文名"  name
+    read -p "please input your name: "  name
     echo "userName=$name" > ~/$config
 
-    read -p "请输入git仓库"  gitRepo
+    read -p "please input git repositories to sync code: "  gitRepo
     echo "gitRepo=$gitRepo" >> ~/$config
 
-    read -p "请输入服务器账号"  serverName
+    read -p "please input server's 'user@host'"  serverName
     echo "serverName=$serverName" >> ~/$config
 
-    read -p "请输入服务器密码"  password
+    read -p "please input server's password"  password
     echo "password=$password" >> ~/$config
 
-    read -p "请输入服务器路径"  path
+    read -p "please input server's path to build"  path
     echo "path=$path" >> ~/$config
 
     echo "buildPath=$path/gradles/$name/*/" >> ~/$config
