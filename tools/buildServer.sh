@@ -12,19 +12,23 @@ SCRIPTPATH=$(cd $rw && pwd )/tools/
 
 
 init(){
+    chmod +x $SCRIPTPATH/loginssh.sh 
+    chmod +x $SCRIPTPATH/scp.sh
+    chmod +x $SCRIPTPATH/spawnssh.sh
+
     read -p "please input your name: "  name
     echo "userName=$name" > ~/$config
 
     read -p "please input git repositories to sync code: "  gitRepo
     echo "gitRepo=$gitRepo" >> ~/$config
 
-    read -p "please input server's 'user@host'"  serverName
+    read -p "please input server's 'user@host' : "  serverName
     echo "serverName=$serverName" >> ~/$config
 
-    read -p "please input server's password"  password
+    read -p "please input server's password: "  password
     echo "password=$password" >> ~/$config
 
-    read -p "please input server's path to build"  path
+    read -p "please input server's path to build: "  path
     echo "path=$path" >> ~/$config
 
     echo "buildPath=$path/gradles/$name/*/" >> ~/$config
