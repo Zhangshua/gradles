@@ -38,3 +38,5 @@ $ gradles assembleDebug --offline
 $ gradles clean
 ```
 编译完的apk放于当前工程根目录的```build/outputs/apk/```
+
+>如果有问题，欢迎提issue；如果觉得不错，欢迎star
